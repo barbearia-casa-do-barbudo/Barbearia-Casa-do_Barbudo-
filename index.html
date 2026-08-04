@@ -1,4 +1,4 @@
-[index-v2.html](https://github.com/user-attachments/files/30714486/index-v2.html)
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -19,6 +19,30 @@
     --amarelo-canario: #FFEF00;
     --amarelo-canario-suave: #d8cb45;
   }
+
+  /* ===== NAVEGAÇÃO ENTRE PÁGINAS (site) ===== */
+  .site-nav {
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    background: var(--preto); border-bottom: 1px solid var(--ouro-escuro);
+    padding: 0.7rem 1rem; position: sticky; top: 0; z-index: 200;
+  }
+  .site-nav a {
+    flex: 1 1 0; max-width: 220px; text-align: center; text-decoration: none;
+    padding: 0.7rem 1rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--amarelo-canario-suave);
+    border: 1px solid var(--ouro-escuro); border-radius: 10px; background: var(--marrom-medio);
+    transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .site-nav a:hover {
+    color: var(--preto); background: var(--amarelo-canario);
+    border-color: var(--amarelo-canario); transform: translateY(-1px);
+  }
+  .site-nav a.current {
+    color: var(--preto); background: var(--ouro); border-color: var(--ouro);
+    box-shadow: 0 2px 10px rgba(200,134,10,0.35);
+  }
+  .nav-tabs { top: 56px; }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background: var(--preto);
@@ -443,6 +467,10 @@
 </style>
 </head>
 <body>
+<nav class="site-nav">
+  <a href="catalogo.html">Serviços</a>
+  <a href="index.html" class="current">Catálogo</a>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
